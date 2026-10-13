@@ -188,6 +188,6 @@ GROUP BY d.department_id, d.department_name;
 SELECT
     l.location,
     e.employee_name
-FROM location l
-LEFT JOIN employees e
-    ON l.location_id = e.location_id;
+FROM employees e
+RIGHT JOIN location l
+    ON e.location_id = l.location_id;
